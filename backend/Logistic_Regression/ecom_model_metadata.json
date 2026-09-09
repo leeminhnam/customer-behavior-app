@@ -1,0 +1,17 @@
+{
+    "target_name": "is_recommended",
+    "text_column": "review_text",
+    "numerical_columns": [
+        "Unnamed: 0",
+        "rating_review",
+        "helpfulness",
+        "total_feedback_count"
+    ],
+    "vocab_size": 3000,
+    "best_model": "Logistic Regression",
+    "metrics": {
+        "accuracy": 0.9631,
+        "f1_score": 0.9755,
+        "roc_auc": 0.9915
+    }
+}
