@@ -53,8 +53,9 @@ customer-behavior-app/
 │   ├── dl/                                      # Mô hình Deep Learning
 │   │   ├── customer_preference_prediction_mlp.ipynb  # Notebook huấn luyện MLP
 │   │   └── sephora_preference_mlp_best.pth      # Model weights (PyTorch)
-│   ├── product_info.csv                         # Dataset sản phẩm (từ Kaggle) ⬇️
-│   ├── reviews.csv                              # Dataset đánh giá (từ Kaggle) ⬇️ (gitignored – quá lớn)
+│   ├── DATA/                                    # Dataset
+│   │   ├── product_info.csv                     # Dataset sản phẩm (từ Kaggle) ⬇️
+│   │   └── reviews.csv                          # Dataset đánh giá (từ Kaggle) ⬇️ (gitignored – quá lớn)
 │   ├── main.py                                  # FastAPI entry point
 │   └── requirements.txt                         # Thư viện Python
 ├── frontend/
@@ -72,12 +73,13 @@ customer-behavior-app/
 
 Dataset được lấy từ: **[Sephora Products and Skincare Reviews](https://www.kaggle.com/datasets/nadyinky/sephora-products-and-skincare-reviews)**
 
-Sau khi tải về, giải nén và đặt **2 file** sau vào thư mục `backend/`:
+Sau khi tải về, giải nén và đặt **2 file** sau vào thư mục `backend/DATA/`:
 
 ```
 backend/
-├── product_info.csv     ← đặt ở đây
-└── reviews.csv          ← đặt ở đây  (file ~270MB, đã gitignore)
+└── DATA/
+    ├── product_info.csv     ← đặt ở đây
+    └── reviews.csv          ← đặt ở đây  (file ~270MB, đã gitignore)
 ```
 
 > ⚠️ **Lưu ý:** File `reviews.csv` có dung lượng khoảng ~270MB nên đã được thêm vào `.gitignore`. Bạn **bắt buộc phải tự tải** về từ Kaggle và đặt vào đúng thư mục mới có thể chạy lại notebook huấn luyện.
@@ -96,7 +98,7 @@ cd customer-behavior-app
 ### 2. Tải Dataset
 
 - Truy cập: https://www.kaggle.com/datasets/nadyinky/sephora-products-and-skincare-reviews
-- Tải về và giải nén, đặt `product_info.csv` và `reviews.csv` vào thư mục `backend/`
+- Tải về và giải nén, đặt `product_info.csv` và `reviews.csv` vào thư mục `backend/DATA/`
 
 ### 3. Cài đặt Backend (Python)
 
